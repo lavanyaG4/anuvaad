@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0E6E7E">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon-192.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <title>Anuvaad – say it in any language</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>అనువాదం <span>Anuvaad</span></h1>
+      <p>Type or speak in one language. Get the other three, and how to say them.</p>
+    </div>
+    <div class="who">
+      <span id="whoami"></span>
+      <button id="account-btn" class="ghost small">Log in</button>
+    </div>
+  </header>
+
+  <section id="account" class="panel" hidden>
+    <div class="tabs" role="tablist">
+      <button id="tab-login" class="tab active" type="button">Log in</button>
+      <button id="tab-signup" class="tab" type="button">Sign up</button>
+    </div>
+    <form id="auth-form">
+      <label id="name-row" hidden>Name <input id="name" type="text" autocomplete="name" maxlength="60"></label>
+      <label>Email <input id="email" type="email" autocomplete="email" required></label>
+      <label>Password <input id="password" type="password" autocomplete="current-password" minlength="8" required></label>
+      <button id="auth-submit" class="primary" type="submit">Log in</button>
+    </form>
+    <p id="auth-status" class="muted" role="status"></p>
+    <p class="muted">An account lets you save phrases and see your history on every device.</p>
+  </section>
+
+  <section class="panel">
+    <label for="source" class="muted">I am writing in</label>
+    <select id="source"></select>
+    <textarea id="text" rows="3" placeholder="Type a sentence, or tap Speak" aria-label="Sentence"></textarea>
+
+    <div id="typing-row" hidden>
+      <label class="check"><input type="checkbox" id="typing" checked><span id="typing-label"></span></label>
+      <p id="typing-hint" class="muted"></p>
+    </div>
+    <div id="preview" class="say" hidden>
+      <p class="say-label" id="preview-label"></p>
+      <p class="say-text" id="preview-text"></p>
+      <button id="use-preview" class="small">Edit in native script</button>
+    </div>
+
+    <div class="row">
+      <button id="mic" class="ghost">Speak</button>
+      <button id="go" class="primary">Translate</button>
+    </div>
+    <p id="status" role="status"></p>
+  </section>
+
+  <div id="results"></div>
+
+  <section id="library" class="panel" hidden>
+    <div class="tabs" role="tablist">
+      <button id="tab-phrases" class="tab active" type="button">Saved phrases</button>
+      <button id="tab-history" class="tab" type="button">History</button>
+    </div>
+    <p id="lib-empty" class="muted"></p>
+    <ul id="lib-list"></ul>
+    <button id="clear-history" class="ghost small" hidden>Clear history</button>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
