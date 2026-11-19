@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/YOUR_USERNAME/anuvaad/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/anuvaad/actions)
 
-**Live demo:** https://YOUR-APP.onrender.com (free tier: the first load after idle can take about a minute)
+**Live demo:** (https://anuvaad-f5yh.onrender.com/) (free tier: the first load after idle can take about a minute)
 
 Type or speak one sentence in **English, Telugu, Hindi or Kannada** and get it in the other three, with **how to pronounce it written in Telugu script**. You can type Telugu, Hindi or Kannada using English letters (`nenu bagunnanu` becomes నేను బాగున్నాను). Log in to keep a phrasebook and history that follow you between phone and laptop. Installs on a phone as a PWA.
 
